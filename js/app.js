@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeProduct = null;
 
   // Instagram Profile URL
-  const INSTAGRAM_PROFILE_URL = 'https://www.instagram.com/keha.official';
+  const INSTAGRAM_PROFILE_URL = 'https://www.instagram.com/the_keha_collective?igsh=MXF4dGp4ZXJmM3pmZQ==';
 
   // Set total count
   if (countAll) countAll.textContent = products.length;
