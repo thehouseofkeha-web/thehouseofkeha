@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Kerala Kasavu Embroidered Clutch',
       price: '₹1,450',
       category: 'Handloom & Weaves',
-      productImg: 'assets/k001-product.jpg.jpeg',
+      productImg: 'assets/k001-product.jpg.jpg',
       makerImg: 'assets/k001-maker.jpg.jpg',
       makerName: 'Nayana V.',
       makerLocation: 'Chendamangalam, Ernakulam',
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Hand-carved Teakwood Salad Bowl',
       price: '₹1,850',
       category: 'Woodcraft',
-      productImg: 'assets/k002-product.jpg.jpeg',
+      productImg: 'assets/k002-product.jpg.jpg',
       makerImg: 'assets/k002-maker.jpg.jpg',
       makerName: 'Rema Devi',
       makerLocation: 'Nilambur, Malappuram',
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Terracotta Earth Water Jug & Cup Set',
       price: '₹920',
       category: 'Terracotta & Pottery',
-      productImg: 'assets/k003-product.jpg.jpeg',
+      productImg: 'assets/k003-product.jpg.jpg',
       makerImg: 'assets/k003-maker.jpg.jpg',
       makerName: 'Kavitha P.',
       makerLocation: 'Aruvacode, Nilambur',
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Handspun Kora Grass Floor Mat',
       price: '₹1,200',
       category: 'Handloom & Weaves',
-      productImg: 'assets/k004-product.jpg.jpeg',
+      productImg: 'assets/k004-product.jpg.jpg',
       makerImg: 'assets/k004-maker.jpg.jpg',
       makerName: 'Saraswathi Amma',
       makerLocation: 'Chittur, Palakkad',
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Coir & Jute Braided Everyday Tote Bag',
       price: '₹890',
       category: 'Eco Accessories',
-      productImg: 'assets/k007-product.jpg.jpeg',
+      productImg: 'assets/k007-product.jpg.jpg',
       makerImg: 'assets/k007-maker.jpg.jpg',
       makerName: 'Sujatha K.',
       makerLocation: 'Alappuzha Backwaters',
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Organic Cardamom & Pepper Spice Box',
       price: '₹1,600',
       category: 'Botanicals',
-      productImg: 'assets/k008-product.jpg.jpeg',
+      productImg: 'assets/k008-product.jpg.jpg',
       makerImg: 'assets/k008-maker.jpg.jpg',
       makerName: 'Marykutty Joseph',
       makerLocation: 'Idukki Western Ghats',
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Screw-Pine Leaf Woven Table Runner',
       price: '₹1,050',
       category: 'Handloom & Weaves',
-      productImg: 'assets/k009-product.jpg.jpeg',
+      productImg: 'assets/k009-product.jpg.jpg',
       makerImg: 'assets/k009-maker.jpg.jpg',
       makerName: 'Bhavani M.',
       makerLocation: 'Thazhava, Kollam',
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Natural Banana Fiber Crossbody Pouch',
       price: '₹750',
       category: 'Eco Accessories',
-      productImg: 'assets/k012-product.jpg.jpeg',
+      productImg: 'assets/k012-product.jpg.jpg',
       makerImg: 'assets/k012-maker.jpg.jpg',
       makerName: 'Geetha Kumari',
       makerLocation: 'Kottayam',
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Hand-knitted Khadi Linen Scarf',
       price: '₹1,350',
       category: 'Handloom & Weaves',
-      productImg: 'assets/k014-product.jpg.jpeg',
+      productImg: 'assets/k014-product.jpg.jpg',
       makerImg: 'assets/k014-maker.jpg.jpg',
       makerName: 'Bindu Sree',
       makerLocation: 'Kannur Handloom Hub',
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Handcrafted Bell-Metal Tea Light Holder',
       price: '₹980',
       category: 'Metal Craft',
-      productImg: 'assets/k015-product.jpg.jpeg',
+      productImg: 'assets/k015-product.jpg.jpg',
       makerImg: 'assets/k015-maker.jpg.jpg',
       makerName: 'Latha Sivaraman',
       makerLocation: 'Irinjalakuda, Thrissur',
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeProduct = null;
 
   // Instagram Profile URL
-  const INSTAGRAM_PROFILE_URL = 'https://www.instagram.com/the_keha_collective?igsh=MXF4dGp4ZXJmM3pmZQ==';
+  const INSTAGRAM_PROFILE_URL = 'https://www.instagram.com/keha.official';
 
   // Set total count
   if (countAll) countAll.textContent = products.length;
