@@ -4,232 +4,318 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Catalog Data with 15 Handcrafted Creations
+  // Instagram Profile URL from official document
+  const INSTAGRAM_PROFILE_URL = 'https://www.instagram.com/the_keha_collective?igsh=MXF4dGp4ZXJmM3pmZQ==';
+
+  // Catalog Data with 22 Handcrafted Creations from Order.docx
   const products = [
     {
       id: 'k001',
       code: 'K-001',
-      name: 'Kerala Kasavu Embroidered Clutch',
-      price: '₹1,450',
-      category: 'Handloom & Weaves',
+      name: 'Cloth Journal',
+      price: '₹250 - ₹450',
+      category: 'Stationery',
       productImg: 'assets/k001-product.jpg.jpg',
       makerImg: 'assets/k001-maker.jpg.jpg',
-      makerName: 'Nayana V.',
-      makerLocation: 'Chendamangalam, Ernakulam',
-      makerStory: 'Nayana mastered the art of hand-weaving traditional Kasavu cotton after reviving her family loom in Chendamangalam. Every clutch is hand-stitched with organic gold zari, providing sustainable livelihoods for her village women weaving collective.',
-      description: 'Woven with pure organic unbleached cotton and authentic Kasavu tissue borders, this handcrafted clutch blends timeless Kerala heritage with sleek contemporary fashion. Features an eco-friendly interior lining.',
-      materials: '100% Handloom Cotton, Zari, Eco Canvas',
-      specs: '10" x 6" x 2" | 180g'
+      makerName: 'Habeeba',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A dedicated housewife who began her entrepreneurial journey during the COVID-19 pandemic. With support from iLab, she transforms everyday craft into nourishing lifestyle creations. Her collection features hand-woven fabric diaries, natural soaps, and bath bars.',
+      description: 'Handcrafted cloth-bound journal made with rich fabric covers. Available in Small (₹250), Medium (₹350), and Big (₹450) sizes for keepsakes and daily notes.',
+      altNames: ['Loom & Quill Fabric Diary', 'Handcrafted Heritage Keepsake Book']
     },
     {
       id: 'k002',
       code: 'K-002',
-      name: 'Hand-carved Teakwood Salad Bowl',
-      price: '₹1,850',
-      category: 'Woodcraft',
+      name: 'Post Card (Pack of 4)',
+      price: '₹150',
+      category: 'Stationery',
       productImg: 'assets/k002-product.jpg.jpg',
       makerImg: 'assets/k002-maker.jpg.jpg',
-      makerName: 'Rema Devi',
-      makerLocation: 'Nilambur, Malappuram',
-      makerStory: 'Rema crafts every wooden piece using reclaimed teakwood from sustainable plantations in Nilambur. Starting with just two hand chisels, her workshop now empowers five female woodturners in her community.',
-      description: 'Sculpted from aged Nilambur teakwood, renowned for its rich golden grain and durability. Hand-polished with food-grade cold-pressed coconut oil to preserve its natural luster without synthetic chemicals.',
-      materials: 'Reclaimed Nilambur Teak, Virgin Coconut Oil Finish',
-      specs: '8" Diameter x 3.5" Depth | 420g'
+      makerName: 'Punnya M K',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'An inventive entrepreneur who chose the path less travelled over a conventional routine, she turned a therapeutic fascination into a purpose-driven venture. Stepping into Kerala\'s craft market with family support, she crafts eco-conscious goods that bring mindful warmth into everyday spaces.',
+      description: 'A charming set of 4 printed art postcards capturing nostalgic themes, travel art, and traditional aesthetics.',
+      altNames: ['Nostalgia Mail Art', 'Mini Travel Prints & Collector Cards']
     },
     {
       id: 'k003',
       code: 'K-003',
-      name: 'Terracotta Earth Water Jug & Cup Set',
-      price: '₹920',
-      category: 'Terracotta & Pottery',
-      productImg: 'assets/k003-product.jpg.jpg',
+      name: 'Paper Book Marks (Pack of 4)',
+      price: '₹120',
+      category: 'Stationery',
+      productImg: 'assets/k003-product.jpg.jpeg',
       makerImg: 'assets/k003-maker.jpg.jpg',
-      makerName: 'Kavitha P.',
-      makerLocation: 'Aruvacode, Nilambur',
-      makerStory: 'Hailing from the historic potter village of Aruvacode, Kavitha infuses traditional clay wheel sculpting with modern ergonomic designs that keep drinking water naturally cool and mineral-rich.',
-      description: 'Hand-thrown on a traditional potter wheel using natural Kerala riverbed clay. The porous clay structure naturally aerates and chills water while adding subtle alkaline minerals.',
-      materials: '100% Natural Riverbed Clay (Unglazed)',
-      specs: '1.5L Jug + 2 Cups (250ml each)'
+      makerName: 'Punnya M K',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'An inventive entrepreneur who chose the path less travelled over a conventional routine, she turned a therapeutic fascination into a purpose-driven venture. Stepping into Kerala\'s craft market with family support, she crafts eco-conscious goods that bring mindful warmth into everyday spaces.',
+      description: 'Set of 4 illustrated paper bookmarks designed for book lovers, printed on eco-friendly durable cardstock.',
+      altNames: ['Page Hugger Bookmark', 'Artisan Illustrated Book Tag']
     },
     {
       id: 'k004',
       code: 'K-004',
-      name: 'Handspun Kora Grass Floor Mat',
-      price: '₹1,200',
-      category: 'Handloom & Weaves',
+      name: 'Magnetic Book Mark (Pack of 3)',
+      price: '₹150',
+      category: 'Stationery',
       productImg: 'assets/k004-product.jpg.jpg',
       makerImg: 'assets/k004-maker.jpg.jpg',
-      makerName: 'Saraswathi Amma',
-      makerLocation: 'Chittur, Palakkad',
-      makerStory: 'Saraswathi has been weaving natural grass mats for over 28 years. Her intricate geometric weaves are lightweight, cooling, and completely bio-degradable, carrying forward Palakkad weaving traditions.',
-      description: 'Hand-woven from wild-harvested Kora river grass (Cyperus corymbosus). Naturally breathable, moisture-wicking, and foldable, making it ideal for yoga, meditation, or cozy home accents.',
-      materials: 'Wild Kora Grass, Natural Plant-Dye Edging',
-      specs: '4ft x 2.5ft | Rollable'
+      makerName: 'Punnya M K',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'An inventive entrepreneur who chose the path less travelled over a conventional routine, she turned a therapeutic fascination into a purpose-driven venture. Stepping into Kerala\'s craft market with family support, she crafts eco-conscious goods that bring mindful warmth into everyday spaces.',
+      description: 'Pack of 3 magnetic bookmarks that gently clip over your pages, ensuring you never lose your reading spot.',
+      altNames: ['Snap-Lock Page Grip', 'Never-Lose Magnetic Marker']
     },
     {
       id: 'k005',
       code: 'K-005',
-      name: 'Wild Vetiver & Lemongrass Body Bar',
-      price: '₹380',
-      category: 'Botanicals',
-      productImg: 'assets/k005-product.jpg.jpeg',
+      name: 'Mini Book',
+      price: '₹60',
+      category: 'Stationery',
+      productImg: 'assets/k005-product.jpg.jpg',
       makerImg: 'assets/k005-maker.jpg.jpg',
-      makerName: 'Dr. Lakshmi Nair',
-      makerLocation: 'Wayanad High Ranges',
-      makerStory: 'Lakshmi collaborates with indigenous tribal women collectives in Wayanad to sustainably harvest wild vetiver roots and fresh lemongrass, crafting small-batch cold-process herbal soaps.',
-      description: 'An invigorating artisanal botanical soap enriched with steam-distilled lemongrass essential oil and fragrant Ramacham (vetiver) roots for gentle exfoliation and aromatic aromatherapy.',
-      materials: 'Cold-pressed Coconut Oil, Vetiver Root, Lemongrass',
-      specs: '125g Bar | 100% Biodegradable'
+      makerName: 'Punnya M K',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'An inventive entrepreneur who chose the path less travelled over a conventional routine, she turned a therapeutic fascination into a purpose-driven venture. Stepping into Kerala\'s craft market with family support, she crafts eco-conscious goods that bring mindful warmth into everyday spaces.',
+      description: 'Delightful pocket-sized miniature notebook crafted with unruled paper for quick thoughts, quotes, or mini gifts.',
+      altNames: ['Pocket Wonder Micro-Journal', 'Fairy Tale Mini Book Charm']
     },
     {
       id: 'k006',
       code: 'K-006',
-      name: 'Hand-hammered Brass Kindi Oil Lamp',
-      price: '₹2,100',
-      category: 'Metal Craft',
+      name: 'Bamboo Toothbrush',
+      price: '₹50 - ₹120',
+      category: 'Eco-friendly',
       productImg: 'assets/k006-product.jpg.jpeg',
       makerImg: 'assets/k006-maker.jpg.jpg',
-      makerName: 'Mini S.',
-      makerLocation: 'Mannar, Alappuzha',
-      makerStory: 'Breaking long-standing barriers in traditional bell-metal casting, Mini directs a renowned brass-smith workshop in Mannar, crafting heirloom oil lamps that radiate warmth and tradition.',
-      description: 'Cast in heavy pure brass and hand-engraved by artisans in Mannar. Features an iconic Kerala silhouette designed to hold oil and light single or multiple cotton wicks for evening rituals.',
-      materials: 'Solid Bell-Metal Brass, Polished Finish',
-      specs: '5.5" Height x 6" Base | 650g'
+      makerName: 'Punnya M K',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'An inventive entrepreneur who chose the path less travelled over a conventional routine, she turned a therapeutic fascination into a purpose-driven venture. Stepping into Kerala\'s craft market with family support, she crafts eco-conscious goods that bring mindful warmth into everyday spaces.',
+      description: '100% biodegradable bamboo toothbrush with soft charcoal bristles. Available individually (₹50) or as a Pack of 3 (₹120).',
+      altNames: ['Earth-First Charcoal Soft Bristle Brush', 'Pure Smile Eco-Brush']
     },
     {
       id: 'k007',
       code: 'K-007',
-      name: 'Coir & Jute Braided Everyday Tote Bag',
-      price: '₹890',
-      category: 'Eco Accessories',
+      name: 'Paper Seed Pen',
+      price: '₹30',
+      category: 'Eco-friendly',
       productImg: 'assets/k007-product.jpg.jpg',
       makerImg: 'assets/k007-maker.jpg.jpg',
-      makerName: 'Sujatha K.',
-      makerLocation: 'Alappuzha Backwaters',
-      makerStory: 'Utilizing golden coconut fibers harvested along Alappuzha backwaters, Sujatha creates ultra-durable eco totes. Her self-help unit provides fair wages to 12 women co-op workers.',
-      description: 'Hand-spun coconut coir blended with soft natural jute yarn. Designed with reinforced handles and a roomy interior to comfortably hold groceries, laptops, or daily essentials.',
-      materials: 'Kerala Golden Coir, Natural Jute, Cotton Lining',
-      specs: '15" Height x 13" Width x 4" Depth'
+      makerName: 'Arshida',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'An inspiring young artisan from Calicut who specializes in eco-friendly plantable stationery, turning recycled paper and organic seeds into zero-waste everyday items.',
+      description: 'Zero-waste eco pen made from recycled paper and embedded with plantable seeds that sprout into herbs or flowers when planted after use.',
+      altNames: ['The Plantable Magic Pen', 'Grow-Your-Own Herb Seed Pen']
     },
     {
       id: 'k008',
       code: 'K-008',
-      name: 'Organic Cardamom & Pepper Spice Box',
-      price: '₹1,600',
-      category: 'Botanicals',
+      name: 'Crochet Keychain',
+      price: '₹180',
+      category: 'Crochet',
       productImg: 'assets/k008-product.jpg.jpg',
       makerImg: 'assets/k008-maker.jpg.jpg',
-      makerName: 'Marykutty Joseph',
-      makerLocation: 'Idukki Western Ghats',
-      makerStory: 'Marykutty manages an organic spice forest in Idukki. She selects shade-grown green cardamom pods and Tellicherry black pepper, hand-sorting every batch for unmatched aroma.',
-      description: 'A sensory treasure box featuring single-origin jumbo cardamom pods and sun-dried black peppercorns, housed in a handcrafted rosewood canister with airtight brass latch.',
-      materials: 'Organically Grown Spices, Hand-turned Rosewood',
-      specs: '250g Assortment (125g Cardamom + 125g Pepper)'
+      makerName: 'Naja',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'An eighth-grade student and our youngest entrepreneur yet, she honed her craft with support from iLab and is marking her first-time selling journey with KeHa Collective. Her delightful handmade crochet collection features stylish bags, keychains, hairbands, scrunchies, and bows.',
+      description: 'Adorable handcrafted crochet keychain made with durable yarn, adding a cozy pop of color to bags and key rings.',
+      altNames: ['Handspun Yarn Bag Charm', 'Pocket Hug Crochet Cutie']
     },
     {
       id: 'k009',
       code: 'K-009',
-      name: 'Screw-Pine Leaf Woven Table Runner',
-      price: '₹1,050',
-      category: 'Handloom & Weaves',
+      name: 'Crochet Scrunchies',
+      price: '₹200',
+      category: 'Crochet',
       productImg: 'assets/k009-product.jpg.jpg',
       makerImg: 'assets/k009-maker.jpg.jpg',
-      makerName: 'Bhavani M.',
-      makerLocation: 'Thazhava, Kollam',
-      makerStory: 'Bhavani preserves the centuries-old Thazhava craft of harvesting and splitting soft screw-pine leaves into delicate ribbons, weaving luxury dining accessories for modern tables.',
-      description: 'Hand-woven Kaitha (Screw-pine) leaf runner with natural silk thread borders. Resistant to heat and moisture, bringing organic warmth and tactile texture to dining settings.',
-      materials: 'Natural Kaitha (Screw-Pine) Leaves, Silk Thread',
-      specs: '60" Length x 14" Width'
+      makerName: 'Khadeeja',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A skilled local artisan from Calicut crafting soft, hair-friendly scrunchies and yarn creations with attention to color, comfort, and zero snagging.',
+      description: 'Soft hand-crocheted hair scrunchie designed for high elasticity and snag-free hair styling.',
+      altNames: ['Cloud-Knit Fluff Scrunchie', 'Zero-Snag Crochet Hair Donut']
     },
     {
       id: 'k010',
       code: 'K-010',
-      name: 'Aranmula Mirror Metal Brass Pendant',
-      price: '₹2,450',
-      category: 'Eco-Jewelry',
-      productImg: 'assets/k010-product.jpg.jpeg',
+      name: 'Natural Soaps (Pack of 3)',
+      price: '₹100',
+      category: 'Soap',
+      productImg: 'assets/k010-product.jpg.jpg',
       makerImg: 'assets/k010-maker.jpg.jpg',
-      makerName: 'Aparna Viswanathan',
-      makerLocation: 'Aranmula, Pathanamthitta',
-      makerStory: 'Aparna incorporates metal mirror metallurgy secrets passed down through generations into delicate contemporary jewelry, fashioning statement bronze-brass pieces with radiant luster.',
-      description: 'Hand-polished metal pendant crafted with high-tin bronze alloy using traditional lost-wax casting. Comes with an adjustable hand-braided black silk cord.',
-      materials: 'Aranmula High-Tin Metal Alloy, Silk Cord',
-      specs: '1.8" Pendant Diameter | Adjustable Cord'
+      makerName: 'Habeeba',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A dedicated housewife who began her entrepreneurial journey during the COVID-19 pandemic. With support from iLab, she transforms everyday cleansing into a nourishing ritual.',
+      description: 'Artisanal cold-pressed soap sample set featuring 3 miniature bars enriched with natural plant extracts and essential oils.',
+      altNames: ['Artisan Cold-Pressed Bath Bar Quartet', 'Botanical Spa Gift Set']
     },
     {
       id: 'k011',
       code: 'K-011',
-      name: 'Hand-painted Kerala Mural Art Plaque',
-      price: '₹3,200',
-      category: 'Woodcraft',
-      productImg: 'assets/k011-product.jpg.jpeg',
+      name: 'Aloevera Soap',
+      price: '₹100',
+      category: 'Soap',
+      productImg: 'assets/k011-product.jpg.jpg',
       makerImg: 'assets/k011-maker.jpg.jpg',
-      makerName: 'Radhika Mohan',
-      makerLocation: 'Guruvayur, Thrissur',
-      makerStory: 'Formally trained in classical Kerala mural painting, Radhika uses natural mineral and botanical dyes to paint vibrant heritage artwork on wooden panels.',
-      description: 'A museum-quality mural wall panel painted in the traditional 5-color palette (Panchavarna) depicting nature and traditional motifs on solid Jackfruit wood.',
-      materials: 'Jackfruit Wood, Natural Stone Pigments',
-      specs: '10" x 10" x 1" | Ready to Mount'
+      makerName: 'Habeeba',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A dedicated housewife who began her entrepreneurial journey during the COVID-19 pandemic. With support from iLab, she transforms everyday cleansing into a nourishing ritual.',
+      description: 'Pure homemade soap infused with organic fresh aloe vera extract to soothe, cool, and hydrate tired skin naturally.',
+      altNames: ['Hydra-Calm Fresh Aloe Vera Bath Bar', 'Skin-Soothing Aloe Bar']
     },
     {
       id: 'k012',
       code: 'K-012',
-      name: 'Natural Banana Fiber Crossbody Pouch',
-      price: '₹750',
-      category: 'Eco Accessories',
-      productImg: 'assets/k012-product.jpg.jpg',
+      name: 'Goat Milk Soap',
+      price: '₹150',
+      category: 'Soap',
+      productImg: 'assets/k012-product.jpg.jpeg',
       makerImg: 'assets/k012-maker.jpg.jpg',
-      makerName: 'Geetha Kumari',
-      makerLocation: 'Kottayam',
-      makerStory: 'Geetha extracts strong fibers from discarded banana plant trunks after harvest, turning agricultural waste into soft, resilient bags that uplift rural farm families.',
-      description: 'Lightweight crossbody bag hand-woven from banana pseudo-stem plant fibers. Features a secure antique brass zip closure and adjustable shoulder strap.',
-      materials: '100% Upcycled Banana Plant Fiber, Brass Zip',
-      specs: '8.5" x 7.0" | Strap length: 48"'
+      makerName: 'Habeeba',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A dedicated housewife who began her entrepreneurial journey during the COVID-19 pandemic. With support from iLab, she transforms everyday cleansing into a nourishing ritual.',
+      description: 'Rich and creamy goat milk soap bar formulated with natural emollients to nourish and restore delicate skin.',
+      altNames: ['Whipped Cream Goat Milk Moisture Bar', 'Silky Skin Velvet Cleanser']
     },
     {
       id: 'k013',
       code: 'K-013',
-      name: 'Pure Virgin Coconut Oil & Herb Elixir',
-      price: '₹550',
-      category: 'Botanicals',
-      productImg: 'assets/k013-product.jpg.jpeg',
+      name: 'Charcoal Soap',
+      price: '₹160',
+      category: 'Soap',
+      productImg: 'assets/k013-product.jpg.jpg',
       makerImg: 'assets/k013-maker.jpg.jpg',
-      makerName: 'Saraswati V.',
-      makerLocation: 'Kasaragod',
-      makerStory: 'Extracted using traditional cold-press wooden ghani mills, Saraswati’s virgin coconut oil is slow-infused with fresh indigo, hibiscus, and bhringraj from her organic medicinal garden.',
-      description: 'Nourishing hair and body oil micro-batched without heat to retain natural antioxidants, Vitamin E, and fresh herbal aroma.',
-      materials: 'Cold-pressed Virgin Coconut Oil, Hibiscus, Indigo',
-      specs: '200ml Amber Glass Bottle'
+      makerName: 'Habeeba',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A dedicated housewife who began her entrepreneurial journey during the COVID-19 pandemic. With support from iLab, she transforms everyday cleansing into a nourishing ritual.',
+      description: 'Handcrafted with activated charcoal and rich plant butters, this aromatherapy bath bar draws out impurities while deeply nourishing your skin.',
+      altNames: ['Activated Charcoal Detox Bar', 'Healing Botanical Cleansing Bar']
     },
     {
       id: 'k014',
       code: 'K-014',
-      name: 'Hand-knitted Khadi Linen Scarf',
-      price: '₹1,350',
-      category: 'Handloom & Weaves',
-      productImg: 'assets/k014-product.jpg.jpg',
+      name: 'Grape Soap',
+      price: '₹300',
+      category: 'Soap',
+      productImg: 'assets/k014-product.jpg.jpeg',
       makerImg: 'assets/k014-maker.jpg.jpg',
-      makerName: 'Bindu Sree',
-      makerLocation: 'Kannur Handloom Hub',
-      makerStory: 'Hailing from Kannur, the famous land of looms, Bindu spins and weaves soft Khadi linen scarves, dyeing them naturally with marigold flowers and indigo.',
-      description: 'Ultra-breathable handloom Khadi cotton-linen scarf with delicate hand-knotted fringe ends. Softens with every wash and offers lightweight year-round comfort.',
-      materials: 'Hand-spun Khadi Cotton & Linen, Plant Dyes',
-      specs: '70" Length x 22" Width'
+      makerName: 'Habeeba',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A dedicated housewife who began her entrepreneurial journey during the COVID-19 pandemic. With support from iLab, she transforms everyday cleansing into a nourishing ritual.',
+      description: 'Luxurious handmade bath bar blended with wild berry and crushed grape extracts for anti-oxidant skin renewal.',
+      altNames: ['Wild Berry & Crushed Grape Glow Bar', 'Juicy Vine Anti-Oxidant Bar']
     },
     {
       id: 'k015',
       code: 'K-015',
-      name: 'Handcrafted Bell-Metal Tea Light Holder',
-      price: '₹980',
-      category: 'Metal Craft',
+      name: 'Sanitary Pad Pouch',
+      price: '₹220',
+      category: 'Stitches / Handmade Goodies',
       productImg: 'assets/k015-product.jpg.jpg',
       makerImg: 'assets/k015-maker.jpg.jpg',
-      makerName: 'Latha Sivaraman',
-      makerLocation: 'Irinjalakuda, Thrissur',
-      makerStory: 'Latha creates intricate perforated cutout patterns in solid bell-metal tea light holders. When lit, they cast mesmerizing geometric light shadows across cozy rooms.',
-      description: 'Traditional bell-metal candle votive with lattice fretwork. Cast using traditional sand-molding techniques for a rich golden ambient light display.',
-      materials: 'Hand-cast Bell-Metal Bronze Alloy',
-      specs: '4.5" Height x 3.8" Diameter | 380g'
+      makerName: 'Safeena',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A creative fabric craftsman from Calicut specializing in hand-painted and custom-printed canvas totes, clutches, and utility pouches.',
+      description: 'Discreet and elegant fabric pouch with secure button closure for carrying personal care items during travel or daily commutes.',
+      altNames: ['Discreet Carry Period Clutch', 'Blush & Travel Care Case']
+    },
+    {
+      id: 'k016',
+      code: 'K-016',
+      name: 'Scrunchies',
+      price: '₹50',
+      category: 'Stitches / Handmade Goodies',
+      productImg: 'assets/k016-product.jpg.jpeg',
+      makerImg: 'assets/k016-maker.jpg.jpg',
+      makerName: 'Khadeeja',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A skilled local artisan from Calicut crafting soft, hair-friendly scrunchies and yarn creations with attention to color, comfort, and zero snagging.',
+      description: 'Everyday fabric hair scrunchie stitched from lightweight cloth to prevent hair breakage and creasing.',
+      altNames: ['Silk-Feel Anti-Breakage Scrunchie', 'Everyday Cloud Hair Cloud']
+    },
+    {
+      id: 'k017',
+      code: 'K-017',
+      name: 'Hand Painted Tote Bag',
+      price: '₹350',
+      category: 'Stitches / Handmade Goodies',
+      productImg: 'assets/k017-product.jpg.jpg',
+      makerImg: 'assets/k017-maker.jpg.jpg',
+      makerName: 'Beena',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A former drawing teacher who left her formal profession to pursue her lifelong creative calling, the artist behind this \'Mullappoo\', serves as a core inspiration for KeHa Collective. She masterfully brings traditional Kerala aesthetics to life through exquisite ornament painting and intricate mural art.',
+      description: 'Eco-conscious canvas tote bag adorned with original hand-painted motif artwork by Kerala women artists.',
+      altNames: ['Custom Canvas Gallery Tote', 'Wearable Canvas Art Shoulder Bag']
+    },
+    {
+      id: 'k018',
+      code: 'K-018',
+      name: 'Printed Tote Bag',
+      price: '₹350',
+      category: 'Stitches / Handmade Goodies',
+      productImg: 'assets/k018-product.jpg.jpg',
+      makerImg: 'assets/k018-maker.jpg.jpg',
+      makerName: 'Safeena',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A creative fabric craftsman from Calicut specializing in hand-painted and custom-printed canvas totes, clutches, and utility pouches.',
+      description: 'Spacious canvas shoulder tote featuring chic block prints and sturdy shoulder straps for everyday errands.',
+      altNames: ['Aesthetic Daily Carry-All', 'Boho Print Everyday Canvas Tote']
+    },
+    {
+      id: 'k019',
+      code: 'K-019',
+      name: 'Hand Painted Pouch',
+      price: '₹250',
+      category: 'Stitches / Handmade Goodies',
+      productImg: 'assets/k019-product.jpg.jpg',
+      makerImg: 'assets/k019-maker.jpg.jpg',
+      makerName: 'Safeena',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A creative fabric craftsman from Calicut specializing in hand-painted and custom-printed canvas totes, clutches, and utility pouches.',
+      description: 'One-of-a-kind zippered organizer pouch featuring hand-painted botanical brushwork on durable cotton canvas.',
+      altNames: ['Brushstroke Artisan Clutch', 'One-of-a-Kind Painted Carryall']
+    },
+    {
+      id: 'k020',
+      code: 'K-020',
+      name: 'Printed Pouch',
+      price: '₹250',
+      category: 'Stitches / Handmade Goodies',
+      productImg: 'assets/k020-product.jpg.jpg',
+      makerImg: 'assets/k020-maker.jpg.jpg',
+      makerName: 'Safeena',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A creative fabric craftsman from Calicut specializing in hand-painted and custom-printed canvas totes, clutches, and utility pouches.',
+      description: 'Compact printed cosmetic & stationery clutch with smooth zipper closure and fabric lining.',
+      altNames: ['Chic Organizer Mini Clutch', 'Pop-Print Cosmetic & Travel Case']
+    },
+    {
+      id: 'k021',
+      code: 'K-021',
+      name: 'Coin Pouch',
+      price: '₹150',
+      category: 'Stitches / Handmade Goodies',
+      productImg: 'assets/k021-product.jpg.jpg',
+      makerImg: 'assets/k021-maker.jpg.jpg',
+      makerName: 'Safeena',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A creative fabric craftsman from Calicut specializing in hand-painted and custom-printed canvas totes, clutches, and utility pouches.',
+      description: 'Mini zippered coin purse to keep change, ear buds, and tiny trinkets organized in style.',
+      altNames: ['Pocket Fortune Squeeze Pouch', 'Little Essentials Zipper Coin Case']
+    },
+    {
+      id: 'k022',
+      code: 'K-022',
+      name: 'Mulla Puvvu Crochet',
+      price: '₹180',
+      category: 'Crochet',
+      productImg: 'assets/k022-product.jpg.jpg',
+      makerImg: 'assets/k022-maker.jpg.jpg',
+      makerName: 'Beena',
+      makerLocation: 'Calicut, Kerala',
+      makerStory: 'A former drawing teacher who left her formal profession to pursue her lifelong creative calling, the artist behind this \'Mullappoo\', serves as a core inspiration for KeHa Collective. She masterfully brings traditional Kerala aesthetics to life through exquisite ornament painting and intricate mural art.',
+      description: 'Everlasting handmade crochet jasmine flower string (gajra) designed for traditional Kerala hair decoration.',
+      altNames: ['Everlasting Jasmine (Mulla Puvvu) Hair Gajra', 'Handmade Fragrant-Vibe Floral Crochet Charm']
     }
   ];
 
@@ -256,8 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalProductPrice = document.getElementById('modalProductPrice');
   const modalProductTitle = document.getElementById('modalProductTitle');
   const modalProductDesc = document.getElementById('modalProductDesc');
-  const modalProductMaterials = document.getElementById('modalProductMaterials');
-  const modalProductSpecs = document.getElementById('modalProductSpecs');
+  const modalAltNames = document.getElementById('modalAltNames');
   const btnOrderInstagram = document.getElementById('btnOrderInstagram');
   const btnCopyOrderInfo = document.getElementById('btnCopyOrderInfo');
   const toast = document.getElementById('toast');
@@ -267,9 +352,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let searchQuery = '';
   let activeProduct = null;
 
-  // Instagram Profile URL
-  const INSTAGRAM_PROFILE_URL = 'https://www.instagram.com/keha.official';
-
   // Set total count
   if (countAll) countAll.textContent = products.length;
 
@@ -278,12 +360,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const filtered = products.filter(p => {
       const matchCat = (currentCategory === 'all') || (p.category === currentCategory);
       const q = searchQuery.toLowerCase().trim();
-      const matchQuery = !q || 
+      const matchQuery = !q ||
         p.code.toLowerCase().includes(q) ||
         p.name.toLowerCase().includes(q) ||
         p.category.toLowerCase().includes(q) ||
         p.makerName.toLowerCase().includes(q) ||
-        p.makerLocation.toLowerCase().includes(q);
+        p.makerLocation.toLowerCase().includes(q) ||
+        (p.altNames && p.altNames.some(alt => alt.toLowerCase().includes(q)));
       return matchCat && matchQuery;
     });
 
@@ -310,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.innerHTML = `
         <div class="card-img-wrapper">
           <img src="${p.productImg}" alt="${p.name}" class="card-img" loading="lazy" onerror="this.src='${p.makerImg}'">
-          <span class="card-category-tag">${escapeHtml(p.category.split('&')[0])}</span>
+          <span class="card-category-tag">${escapeHtml(p.category.split('/')[0])}</span>
           <span class="story-indicator-badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
             <span>Story</span>
@@ -343,7 +426,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Helper: Escape HTML
   function escapeHtml(str) {
-    return str.replace(/[&<>"']/g, function(m) {
+    if (!str) return '';
+    return str.replace(/[&<>"']/g, function (m) {
       return {
         '&': '&amp;',
         '<': '&lt;',
@@ -372,11 +456,27 @@ document.addEventListener('DOMContentLoaded', () => {
     modalProductPrice.textContent = product.price;
     modalProductTitle.textContent = product.name;
     modalProductDesc.textContent = product.description;
-    modalProductMaterials.textContent = product.materials;
-    modalProductSpecs.textContent = product.specs;
 
-    // Set Instagram DM Routing URL
-    // Instagram Direct DM Link with fallback to Profile URL
+    // Populate Product Highlights in single column bordered card
+    if (modalAltNames) {
+      if (Array.isArray(product.altNames) && product.altNames.length > 0) {
+        modalAltNames.innerHTML = product.altNames.map(name => `
+          <div class="alt-name-item">
+            <span class="alt-name-bullet">✦</span>
+            <span class="alt-name-text">${escapeHtml(name)}</span>
+          </div>
+        `).join('');
+      } else {
+        modalAltNames.innerHTML = `
+          <div class="alt-name-item">
+            <span class="alt-name-bullet">✦</span>
+            <span class="alt-name-text">${escapeHtml(product.name)}</span>
+          </div>
+        `;
+      }
+    }
+
+    // Set Instagram Routing URL
     btnOrderInstagram.href = INSTAGRAM_PROFILE_URL;
 
     // Show modal & disable background scrolling
@@ -449,7 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
   btnCopyOrderInfo.addEventListener('click', () => {
     if (!activeProduct) return;
     const textToCopy = `Hi Keha! I'd like to order product code ${activeProduct.code} (${activeProduct.name} - ${activeProduct.price}). Please share details for payment & shipping.`;
-    
+
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(textToCopy).then(() => {
         showToast('Order details copied to clipboard!');
@@ -485,7 +585,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(textToCopy);
         }
-      } catch(e) {}
+      } catch (e) { }
       showToast(`Opening Instagram DM for ${activeProduct.code}...`);
     }
   });
@@ -553,3 +653,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial Render
   renderProducts();
 });
+
