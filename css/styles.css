@@ -767,31 +767,60 @@ body.modal-open {
   margin-bottom: 12px;
 }
 
-.product-specs-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+/* Single Column Bordered Box for Product Highlights */
+.alt-names-card {
+  margin-top: 14px;
   background: var(--color-offwhite);
-  padding: 10px;
+  border: 1.5px solid var(--color-gold);
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
+  padding: 12px 14px;
+  box-shadow: 0 2px 8px rgba(240, 168, 28, 0.08);
 }
 
-.spec-item {
+.alt-names-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--color-border-gold);
+}
+
+.alt-names-icon {
+  font-size: 0.9rem;
+}
+
+.alt-names-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-charcoal-dark);
+}
+
+.alt-names-list {
   display: flex;
   flex-direction: column;
+  gap: 6px;
 }
 
-.spec-label {
-  font-size: 0.7rem;
-  color: var(--color-charcoal-light);
-  font-weight: 600;
+.alt-name-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: var(--color-charcoal);
+  font-weight: 500;
 }
 
-.spec-value {
+.alt-name-bullet {
+  color: var(--color-gold);
   font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-charcoal-dark);
+  line-height: 1.35;
+}
+
+.alt-name-text {
+  line-height: 1.35;
 }
 
 /* Direct Instagram Checkout Action Box */
@@ -826,6 +855,64 @@ body.modal-open {
   font-size: 0.8rem;
   color: rgba(253, 252, 248, 0.85);
   line-height: 1.4;
+}
+
+/* Prominent Instagram Link in Footer */
+.prominent-ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(240, 168, 28, 0.12);
+  border: 1.5px solid var(--color-gold);
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  color: var(--color-gold);
+  text-decoration: none;
+  transition: var(--transition-normal);
+  box-shadow: 0 4px 14px rgba(240, 168, 28, 0.18);
+  width: 100%;
+}
+
+.prominent-ig-link:hover {
+  background: var(--color-gold);
+  color: var(--color-charcoal-dark);
+  box-shadow: 0 6px 22px rgba(240, 168, 28, 0.4);
+  transform: translateY(-2px);
+}
+
+.ig-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-gold);
+  color: var(--color-charcoal-dark);
+  padding: 8px;
+  border-radius: 50%;
+  transition: var(--transition-fast);
+}
+
+.prominent-ig-link:hover .ig-badge-icon {
+  background: var(--color-charcoal-dark);
+  color: var(--color-gold);
+}
+
+.ig-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.ig-handle-title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.ig-handle-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 
 /* Large Visible CTA Button */
@@ -998,9 +1085,20 @@ body.modal-open {
 
 .footer-social-row {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
   padding-top: 8px;
+}
+
+.mezhuku-candle-link {
+  background: rgba(240, 168, 28, 0.06);
+  border-color: rgba(240, 168, 28, 0.45);
+}
+
+.mezhuku-candle-link:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-charcoal-dark);
 }
 
 .social-link {
